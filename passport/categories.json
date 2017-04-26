@@ -8,7 +8,7 @@
       "patterns": [
         {
           "msgSubject": "%BMSHOW",
-          "msgPattern": ".*(Booking ID.*)(Seats.*),.*for (.*) on (.*) at (.*).Please.*()",
+          "msgPattern": "Hi Customer, Booking ID: (.*). Seats: (.*), (\d+) seat\(s\) for (.*) on (.*) at (.*). Please carry your CC\/DC card which was used for booking tickets.",
           "subCategory": "idontknow",
           "groups": [
             {
@@ -21,42 +21,50 @@
             },
             {
               "title": "Location",
-              "groupId": 5
+              "groupId": 6
             },
             {
               "title": "Date",
-              "groupId": 4
+              "groupId": 5
             },
             {
               "title": "Movie",
+              "groupId": 4
+            },
+              {
+              "title": "Total Tickets",
               "groupId": 3
             }
           ]
         },
           {
           "msgSubject": "%BMSHOW",
-          "msgPattern": ".*(tickets - .*)\n\n.*(Booking ID.*)(Seats.*,).*for (.*) on (.*) at (.*).Please.*",
+          "msgPattern": "Hi Customer, (.*) Please click on .*\\s+.* for (.*) on (.*) , at (.*), Seats: (.*). Booking ID: (.*).",
           "subCategory": "idontknow",
           "groups": [
             {
               "title": "Booking Id",
-              "groupId": 1
+              "groupId": 6
             },
             {
               "title": "Seats",
-              "groupId": 2
-            },
-            {
-              "title": "Location",
               "groupId": 5
             },
             {
-              "title": "Date",
+              "title": "Location",
               "groupId": 4
             },
             {
-              "title": "Movie",
+              "title": "Date",
               "groupId": 3
+            },
+            {
+              "title": "Movie",
+              "groupId": 2
+            },
+            {
+              "title": "URL",
+              "groupId": 1
             }
           ]
         }
