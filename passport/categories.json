@@ -68,34 +68,6 @@
             }
           ]
         }
-          ,
-          {
-          "msgSubject": "%BMSHOW",
-          "msgPattern": "Hi Customer, (http.*) Please click on the above link.*\\s{2,}Your tick.* for (.*) on (.*) , at (.*), (Seats:.*). (Book.*).",
-          "subCategory": "idontknow",
-          "groups": [
-            {
-              "title": "Booking Id",
-              "groupId": 6
-            },
-            {
-              "title": "Seats",
-              "groupId": 3
-            },
-            {
-              "title": "Location",
-              "groupId": 4
-            },
-            {
-              "title": "Date",
-              "groupId": 5
-            },
-            {
-              "title": "Movie",
-              "groupId": 2
-            }
-          ]
-        }
         
       ]
     },
