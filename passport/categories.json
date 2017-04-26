@@ -8,7 +8,7 @@
       "patterns": [
         {
           "msgSubject": "%BMSHOW",
-          "msgPattern": "Hi Customer, Booking ID: (.*). Seats: (.*), (\d+) seat\(s\) for (.*) on (.*) at (.*). Please carry your CC\/DC card which was used for booking tickets.",
+          "msgPattern": "Hi Customer, Booking ID: (.*). Seats: (.*), (\\d+) seat\\(s\\) for (.*) on (.*) at (.*). Please carry your CC\/DC card which was used for booking tickets.",
           "subCategory": "idontknow",
           "groups": [
             {
