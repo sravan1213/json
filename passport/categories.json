@@ -115,7 +115,7 @@
       "description": "SMS related to your Movie ticekets and all",
       "patterns": [
         {
-          "msgSubject": "%HSBCN",
+          "msgSubject": "%HSBCIN",
           "msgPattern": "HSBC: Your (\\w+ \\w+) (xxxxx\\d{4}) is used for (\\w+ \\d*.\\d\\d) on (.*) at (.*). Call (\\d+) \\(if in india\\) if you have not used it.",
           "subCategory": "idontknow",
           "groups": [
