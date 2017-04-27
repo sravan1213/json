@@ -115,29 +115,65 @@
       "description": "SMS related to your Movie ticekets and all",
       "patterns": [
         {
-          "msgSubject": "..(-BMSHOW)$",
-          "msgPattern": ".*(Booking ID.*)(Seats.*),.*for (.*) on (.*) at (.*).Please.*()",
+          "msgSubject": "%HSBCN",
+          "msgPattern": "HSBC: Your (\\w+ \\w+) (xxxxx\\d{4}) is used for (\\w+ \\d*.\\d\\d) on (.*) at (.*). Call (\\d+) \\(if in india\\) if you have not used it.",
           "subCategory": "idontknow",
           "groups": [
             {
-              "title": "Booking Id",
+              "title": "Payment Type",
               "groupId": 1
             },
             {
-              "title": "Seats",
-              "groupId": 1
+              "title": "Credit Card",
+              "groupId": 2
             },
             {
-              "title": "Location",
-              "groupId": 1
+              "title": "Amount",
+              "groupId": 3
             },
             {
               "title": "Date",
+              "groupId": 4
+            },
+            {
+              "title": "Paid to",
+              "groupId": 5
+            },
+            {
+              "title": "Customer Support",
+              "groupId": 6
+            }
+          ]
+        },
+          {
+          "msgSubject": "%AxisBk",
+          "msgPattern": "Your a\\/c (\\d+) is (\\w+) (.*) on (.*) A\\/c balance is (.*) Info: (.*)",
+          "subCategory": "idontknow",
+          "groups": [
+            
+            {
+              "title": "Account Number",
               "groupId": 1
             },
             {
-              "title": "Movie",
-              "groupId": 1
+              "title": "Credit/Debit",
+              "groupId": 2
+            },
+            {
+              "title": "Amount",
+              "groupId": 3
+            },
+            {
+              "title": "Date",
+              "groupId": 4
+            },
+            {
+              "title": "Remaining Balance",
+              "groupId": 5
+            },
+            {
+              "title": "Transaction Info",
+              "groupId": 6
             }
           ]
         }
