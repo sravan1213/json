@@ -3,13 +3,14 @@
     {
       "bgImgURL": "https://in.bmscdn.com/showcaseimage/eventimage/baahubali-2-the-conclusion-showcase-24-04-2017-18-47.jpg",
       "title": "Movies",
-      "categoryId": "1",
+      "categoryId": 1,
       "description": "SMS related to your Movie ticekets and all",
       "patterns": [
         {
           "msgSubject": "%BMSHOW",
           "msgPattern": "Hi Customer, Booking ID: (.*). Seats: (.*), (\\d+) seat\\(s\\) for (.*) on (.*) at (.*). Please carry your CC\/DC card which was used for booking tickets.",
-          "subCategory": "idontknow",
+          "subCategory": "1",
+            "logoURL":"",
           "groups": [
             {
               "title": "Booking Id",
@@ -40,7 +41,8 @@
           {
           "msgSubject": "%BMSHOW",
           "msgPattern": "Hi Customer, (.*) Please click on .*\\s+.* for (.*) on (.*) , at (.*), Seats: (.*). Booking ID: (.*).",
-          "subCategory": "idontknow",
+          "subCategory": 1,
+              "logoURL":"",
           "groups": [
             {
               "title": "Booking Id",
@@ -75,13 +77,14 @@
      {
       "bgImgURL": "https://images.trvl-media.com/media/content/expus/graphics/launch/activity1320x742.jpg",
       "title": "Travel",
-      "categoryId": "2",
+      "categoryId": 2,
       "description": "SMS related to your Movie ticekets and all",
       "patterns": [
         {
           "msgSubject": "%STARSP",
           "msgPattern": ".*(Booking ID.*)(Seats.*),.*for (.*) on (.*) at (.*).Please.*()",
-          "subCategory": "idontknow",
+          "subCategory": 1,
+            "logoURL":"",
           "groups": [
             {
               "title": "Booking Id",
@@ -111,13 +114,14 @@
      {
       "bgImgURL": "http://seoulsublet.com/wp-content/uploads/2014/02/banking_in_korea.jpg",
       "title": "Banks",
-      "categoryId": "2",
+      "categoryId": 2,
       "description": "SMS related to your Movie ticekets and all",
       "patterns": [
         {
           "msgSubject": "%HSBCIN",
           "msgPattern": "HSBC: Your (\\w+ \\w+) (xxxxx\\d{4}) is used for (\\w+ \\d*.\\d\\d) on (.*) at (.*). Call (\\d+) \\(if in india\\) if you have not used it.",
-          "subCategory": "idontknow",
+          "subCategory": 1,
+            "logoURL":"http://www.userlogos.org/files/logos/melvbot/HSBC%20colour%20logo%20full%20-%20jpeg.png",
           "groups": [
             {
               "title": "Payment Type",
@@ -147,8 +151,9 @@
         },
           {
           "msgSubject": "%AxisBk",
-          "msgPattern": "Your a\\/c (\\d+) is (\\w+) (.*) on (.*) A\\/c balance is (.*) Info: (.*)",
-          "subCategory": "idontknow",
+          "msgPattern": "Your a\\/c (\\d+) is debited (.*) on (.*) A\\/c balance is (.*) Info: (\\w+\\/\\w+)\\/(.*)\\/.*",
+          "subCategory": 1,
+              "logoURL":"http://www.androidos.in/wp-content/uploads/2013/10/axisbank.png",
           "groups": [
             
             {
@@ -156,23 +161,56 @@
               "groupId": 1
             },
             {
-              "title": "Credit/Debit",
+              "title": "Amount",
               "groupId": 2
             },
             {
-              "title": "Amount",
+              "title": "Date",
               "groupId": 3
             },
             {
-              "title": "Date",
+              "title": "Remaining Balance",
               "groupId": 4
             },
             {
-              "title": "Remaining Balance",
+              "title": "Transaction Id",
               "groupId": 5
             },
             {
-              "title": "Transaction Info",
+              "title": "Paid to",
+              "groupId": 6
+            }
+          ]
+        },
+          {
+          "msgSubject": "%AxisBk",
+          "msgPattern": "Your a\\/c (\\d+) is credited (.*) on (.*) A\\/c balance is (.*) Info: (\\w+\\/\\w+)\\/(.*)\\/.*",
+          "subCategory": 2,
+          "logoURL":"http://www.androidos.in/wp-content/uploads/2013/10/axisbank.png",
+          "groups": [
+            
+            {
+              "title": "Account Number",
+              "groupId": 1
+            },
+            {
+              "title": "Amount",
+              "groupId": 2
+            },
+            {
+              "title": "Date",
+              "groupId": 3
+            },
+            {
+              "title": "Remaining Balance",
+              "groupId": 4
+            },
+            {
+              "title": "Transaction Id",
+              "groupId": 5
+            },
+            {
+              "title": "Paid to",
               "groupId": 6
             }
           ]
