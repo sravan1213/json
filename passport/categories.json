@@ -37,6 +37,45 @@
               "groupId": 3
             }
           ]
+        },{
+          "msgSubject": "%iPaytm",
+          "msgPattern": "Dear Customer, your ticket has been.* for (.*) on (.*), at (.*), (\\d+) Seat\\(s\\): (.*), Total Amount- (.*), Booking ID: (.*),  Pick Up Code: (\\d+) ,   Please.*- (.*) . (.|\\s)*",
+          "subCategory": "1",
+            "logoURL":"",
+          "groups": [
+            {
+              "title": "Booking Id",
+              "groupId": 7
+            },
+            {
+              "title": "Seats",
+              "groupId": 5
+            },
+            {
+              "title": "Location",
+              "groupId": 3
+            },
+            {
+              "title": "Date",
+              "groupId": 2
+            },
+            {
+              "title": "Movie",
+              "groupId": 1
+            },
+              {
+              "title": "Total Tickets",
+              "groupId": 4
+            },
+              {
+              "title": "Pickup Code",
+              "groupId": 8
+            },
+              {
+              "title": "Amount",
+              "groupId": 6
+            }
+          ]
         },
           {
           "msgSubject": "%BMSHOW",
